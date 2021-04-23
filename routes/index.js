@@ -4,8 +4,8 @@ const router = express.Router()
 //@desc Homepage
 //@route GET /
 router.get('/', (req, res) => {
-    res.render('Index', {
-        layout: 'index',
+    res.render('Main', {
+        layout: 'main',
     })
 })
 
