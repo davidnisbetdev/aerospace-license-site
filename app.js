@@ -24,8 +24,7 @@ if(process.env.NODE_ENV === 'dev'){
 }
 
 // Handlebars
-app.engine('.hbs', exphbs({ helpers:{
-}, defaultLayout: 'main', extname: '.hbs'}))
+app.engine('.hbs', exphbs({ defaultLayout: 'main', extname: '.hbs'}))
 app.set('view engine', '.hbs')
 
 //Static folder
