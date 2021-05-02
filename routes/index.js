@@ -25,6 +25,12 @@ router.get('/modules', (req, res) => {
     res.render('modules')
 })
 
+//@desc Login Page
+//@route GET /login
+router.get('/login', (req, res) => {
+    res.render('login')
+})
+
 
 
 
