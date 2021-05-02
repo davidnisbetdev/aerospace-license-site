@@ -19,7 +19,7 @@ router.get('/pricing', (req, res) => {
     res.render('pricing')
 })
 
-//@desc About page
+//@desc About page.
 //@route GET /about
 router.get('/modules', (req, res) => {
     res.render('modules')
