@@ -1,35 +1,35 @@
-const express = require('express')
-const router = express.Router()
+const express = require('express');
+const router = express.Router();
 
 //@desc Homepage
 // GET /
 router.get('/', (req, res) => {
-    res.render('home')
-})
+    res.render('home');
+});
 
 //@desc About page
 //@route GET /about
 router.get('/about', (req, res) => {
-    res.render('about')
-})
+    res.render('about');
+});
 
 //@desc pricing page
-//@route GET /about
+//@route GET /pricing
 router.get('/pricing', (req, res) => {
-    res.render('pricing')
-})
+    res.render('pricing');
+});
 
 //@desc About page.
 //@route GET /about
 router.get('/modules', (req, res) => {
-    res.render('modules')
-})
+    res.render('modules');
+});
 
 //@desc Login Page
 //@route GET /login
 router.get('/login', (req, res) => {
-    res.render('login')
-})
+    res.render('login');
+});
 
 
 
