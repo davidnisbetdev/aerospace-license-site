@@ -10,26 +10,26 @@ const passport = require('passport')
 const connectDB = require('./config/db')
 
 // Loading Config
-dotenv.config({ path: './config/config.env' })
+dotenv.config({ path: './config/config.env' });
 
 // Passport config
-require('./config/passport')(passport)
+require('./config/passport')(passport);
 
-connectDB()
+connectDB();
 
-const app = express()
+const app = express();
 
 // Body Parser
-app.use(express.urlencoded({ extended: false }))
-app.use(express.json())
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 if(process.env.NODE_ENV === 'dev'){
-    app.use(morgan('dev'))
+    app.use(morgan('dev'));
 }
 
 // Handlebars
-app.engine('.hbs', exphbs({ defaultLayout: 'main', extname: '.hbs'}))
-app.set('view engine', '.hbs')
+app.engine('.hbs', exphbs({ defaultLayout: 'main', extname: '.hbs'}));
+app.set('view engine', '.hbs');
 
 // Sessions
 
@@ -42,20 +42,20 @@ app.use(
 );
 
 // Passport Middleware
-app.use(passport.initialize())
-app.use(passport.session())
+app.use(passport.initialize());
+app.use(passport.session());
 
 //Static folder
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')));
 
 //routes
-app.use('/', require('./routes/index'))
-app.use('/auth', require('./routes/auth'))
+app.use('/', require('./routes/index'));
+app.use('/auth', require('./routes/auth'));
 
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000;
 
 app.listen(
-    PORT, 
+    PORT,
     console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
-    )
+    );
