@@ -31,6 +31,11 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+//@desc Page with question selector
+//@route GET /quiz
+router.get('/quiz', (req, res) => {
+    res.render('quiz');
+});
 
 
 

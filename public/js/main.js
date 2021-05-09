@@ -1,6 +1,3 @@
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
-
 // Get the header
 var header = document.querySelector("header");
 
@@ -15,3 +12,6 @@ function myFunction() {
     header.classList.remove("sticky");
     }
 }
+
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};

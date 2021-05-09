@@ -14,6 +14,11 @@ router.get('/google/callback', passport.authenticate('google', {failureRedirect:
 }
 );
 
+//@desc Auth with Microsoft
+//@route GET /auth/ms
+router.get('/microsoft', passport.authenticate('microsoft', {failureRedirect: '/'}));
+
+
 // @desc Logout User
 // @route /auth/logout
 
